@@ -8,7 +8,7 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'bundle exec jekyll serve'. If you change this file, please restart the server process.
 #
-# If you need help with YAML syntax, here are some quick references for you: 
+# If you need help with YAML syntax, here are some quick references for you:
 # https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
 # https://learnxinyminutes.com/docs/yaml/
 #
@@ -18,24 +18,30 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: GOGO Print Sby
-email: gogoprintsby@gmail.com
-description: Jasa Cetak dan Print Banner, Kalender, Brosur, Umbul umbul, Baliho, Baju Partai besar, harga Murah di Indonesia
-long_description: Jasa Cetak dan Print Banner, Kalender, Brosur, Umbul umbul, Baliho, Baju Partai besar, harga Murah di Indonesia
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://gogoprint.aksisoft.com" # the base hostname & protocol for your site, e.g. http://example.com
+title: Usaha Edo
+email: Aksisoftsby@gmail.com
+description: Jasa Pengelolaan Kayu dan Jual Beli produk Kayu professional di Indonesia
+long_description: Jasa Pengelolaan Kayu dan Jual Beli produk Kayu professional di Indonesia
+baseurl: "/" # the subpath of your site, e.g. /blog
+url: "https://usahaedo.aksisoft.com/" # the base hostname & protocol for your site, e.g. http://example.com
+cdn: "https://apps.is3.cloudhost.id/themes/cappa/"
 # url: "http://127.0.0.1:4000" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
 # github_username:  jekyll
+
+about: Welcome to the best five-star deluxe hotel in New York. Hotel elementum sesue the aucan vestibulum aliquam justo in sapien rutrum volutpat.
 
 kontak:
   hp: 0812-1768-6688
   wa: 0812-1768-6688
   linkwa: https://wa.me/6281217686688
-  alamat: Jl. Darmokali Tugu Nomor 28 A 
+  alamat: Jl. Darmokali Tugu Nomor 28 A
   email: aksisoftsby@gmail.com
   googlemapsurl: https://goo.gl/maps/2YSaEa71xdtUMNtm6
   googlemapsembed: <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1978.7582779945521!2d112.7405303129521!3d-7.295711198897492!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fbbd10d06185%3A0x136207b9d14bec5c!2sJl.%20Darmokali%20Tugu%20No.28%2C%20Darmo%2C%20Kec.%20Wonokromo%2C%20Kota%20SBY%2C%20Jawa%20Timur%2060241!5e0!3m2!1sen!2sid!4v1578995478387!5m2!1sen!2sid" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+  instagram: https://instagram.com/
+  facebook: https://faceook.com/
+  twitter: https://twitter.com/
 
 # Build settings
 theme: minima
@@ -43,8 +49,6 @@ plugins:
   - jekyll-feed
   - jekyll-avatar
   - jekyll-seo-tag
-
-
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to

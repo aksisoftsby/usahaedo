@@ -1,52 +1,59 @@
-<!--==========================
-      Footer
-    ============================-->
-<footer id="footer">
+<footer class="footer">
   <div class="footer-top">
     <div class="container">
       <div class="row">
+        <div class="col-md-4">
+          <div class="footer-column footer-about">
+            <h3 class="footer-title">About Usaha Edo</h3>
+            <p class="footer-about-text">{{ site.about }}</p>
 
-        <div class="col-lg-4 col-md-6 footer-info">
-          <h3>{{ site.title }}</h3>
-          <p>{{ site.long_description }}</p>
+          </div>
         </div>
-
-        <div class="col-lg-2 col-md-6 footer-links">
-          <h4>Link Terkait</h4>
-          <ul>
-            <li><a href="{{ site.url }}">Home</a></li>
-            <li><a href="{{ site.url }}/#">About us</a></li>
-            <li><a href="{{ site.url }}/#">Services</a></li>
-            <li><a href="https://gogoprint.aksisoft.com">Printing dan Desain Murah</a></li>
-            <li><a href="https://wedding.aksisoft.com">Jasa Wedding</a></li>
-            <li><a href="https://www.aksisoft.com/">Jasa Website Aksisoft MEDIA</a></li>
-          </ul>
+        <div class="col-md-3 offset-md-1">
+          <div class="footer-column footer-explore clearfix">
+            <h3 class="footer-title">Explore</h3>
+            <ul class="footer-explore-list list-unstyled">
+              {% for m in site.data.menu %}<li><a href="{{ m.url }}">{{ m.title }}</a></li>{% endfor %}
+            </ul>
+          </div>
         </div>
-
-        <div class="col-lg-3 col-md-6 footer-contact">
-          <h4>Kontak Kami</h4>
-          {% include part/kontakkami.html %}
-
+        <div class="col-md-4">
+          <div class="footer-column footer-contact">
+            <h3 class="footer-title">Kontak</h3>
+            <p class="footer-contact-text">{{site.kontak.alamat}}</p>
+            <div class="footer-contact-info">
+              <p class="footer-contact-phone"><span class="flaticon-call"></span> {{site.kontak.hp}}</p>
+              <p class="footer-contact-mail">{{site.kontak.email}}</p>
+            </div>
+            <div class="footer-about-social-list">
+              {{ site.kontak | jsonify }}
+              {% if site.kontak.instagram %}
+              <a href="{{ site.kontak.instagram }}"><i class="ti-instagram"></i></a>
+              {% endif %}
+              {% if site.kontak.facebook %}
+              <a href="{{ site.kontak.facebook }}"><i class="ti-facebook"></i></a>
+              {% endif %}
+              {% if site.kontak.twitter %}
+              <a href="{{ site.kontak.twitter }}"><i class="ti-twitter"></i></a>
+              {% endif %}
+              {% if site.kontak.youtube %}
+              <a href="{{ site.kontak.youtube }}"><i class="ti-youtube"></i></a>
+              {% endif %}
+            </div>
+          </div>
         </div>
-
-        <div class="col-lg-3 col-md-6 footer-newsletter">
-          <h4>Produk berkualitas terbaik</h4>
-          <p>Dapatkan Produk Kualitas terbaik dari kami, dapatkan harga termurah untuk {{ site.produk | join: ', '}}</p>
-          <form action="index.html" method="post">
-            <input type="email" name="email"><input type="submit"  value="Subscribe">
-          </form>
-        </div>
-
       </div>
     </div>
   </div>
-
-  <div class="container">
-    <div class="copyright">
-      &copy; Copyright <strong>{{ site.title }}</strong>. All Rights Reserved
-    </div>
-    <div class="credits">
-      Designed by <a href="{{ site.url }}">{{ site.description }}</a>
+  <div class="footer-bottom">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="footer-bottom-inner">
+            <p class="footer-bottom-copy-right">© Copyright 2022 by <a href="{{ site.url }}">Usaha EDO</a></p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </footer>

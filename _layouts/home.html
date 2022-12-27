@@ -1,98 +1,51 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    {% seo %}
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="{{ site.url }}/favicon.png" rel="icon">
-    <link href="{{ site.url }}/apple-touch-icon.png" rel="apple-touch-icon">
+<head>
+  {% seo %}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="text/javascript">
+  </script>
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
+  <link rel="shortcut icon" href="{{ site.cdn }}img/favicon.png" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed&family=Gilda+Display&display=swap">
+  <link rel="stylesheet" href="{{ site.cdn }}css/plugins.css" />
+  <link rel="stylesheet" href="{{ site.cdn }}css/style.css" />
 
-    <!-- Bootstrap CSS File -->
-    <link href="{{ site.url }}/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+</head>
 
-    <!-- Libraries CSS Files -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href="{{ site.url }}/lib/animate/animate.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.0/css/ionicons.min.css" rel="stylesheet">
-    <link href="{{ site.url }}/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="{{ site.url }}/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+<body>
 
-    <!-- Main Stylesheet File -->
-    <link href="{{ site.url }}/css/style.css" rel="stylesheet">
-  </head>
-  <body>
+  {% include themes/header_nav_cappa.html %}
+  {% if page.is_home %}
+  {% include themes/header_slide_cappa.html %}
+  {% else %}
+  {% include themes/header_title_cappa.html %}
+  {% endif %}
+  {{ content }}
+  {% include themes/_footer.html %}
 
-    {% include themes/_header_menu.html %}
-    {% if page.is_post %}
-    {% include home/intro.html %}
-    <main id="main">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-8">
-            <article>
-              <h1>{{ page.title }}</h1>
-              {% if page.image %}
-              <img src="{{ site.url }}/image/{{ page.image }}" class="img-responsive" />
-              {% endif %}
-              {% include post/before.html %}
-              {{ content }}
-              {% include post/after.html %}
-            </article>
-          </div>
-          <div class="col-md-4">
-            <h2>Hubungi Kami</h2>
-            {% include part/kontakkami.html %}
+  <script src="{{ site.cdn }}js/jquery-3.6.0.min.js"></script>
+  <script src="{{ site.cdn }}js/jquery-migrate-3.0.0.min.js"></script>
+  <script src="{{ site.cdn }}js/modernizr-2.6.2.min.js"></script>
+  <script src="{{ site.cdn }}js/imagesloaded.pkgd.min.js"></script>
+  <script src="{{ site.cdn }}js/jquery.isotope.v3.0.2.js"></script>
+  <script src="{{ site.cdn }}js/pace.js"></script>
+  <script src="{{ site.cdn }}js/popper.min.js"></script>
+  <script src="{{ site.cdn }}js/bootstrap.min.js"></script>
+  <script src="{{ site.cdn }}js/scrollIt.min.js"></script>
+  <script src="{{ site.cdn }}js/jquery.waypoints.min.js"></script>
+  <script src="{{ site.cdn }}js/owl.carousel.min.js"></script>
+  <script src="{{ site.cdn }}js/jquery.stellar.min.js"></script>
+  <script src="{{ site.cdn }}js/jquery.magnific-popup.js"></script>
+  <script src="{{ site.cdn }}js/YouTubePopUp.js"></script>
+  <script src="{{ site.cdn }}js/select2.js"></script>
+  <script src="{{ site.cdn }}js/datepicker.js"></script>
+  <script src="{{ site.cdn }}js/smooth-scroll.min.js"></script>
+  <script src="{{ site.cdn }}js/custom.js"></script>
 
-            <h2>Lokasi Google Maps</h2>
-            {{ site.kontak.googlemapsembed }}
+</body>
 
-            <h2>{{ page.main_title }}</h2>
-            <ul>
-              {% for sb in page.subkat %}
-              <li><a href="{{ site.url }}/{{ page.main_slug }}/{{ sb.slug }}">{{ sb.nama }}</a></li>
-              {% endfor %}
-            </ul>
-
-            <h2>{{ page.this_title }}</h2>
-            <ul>
-              {% for sb in page.after %}
-              <li><a href="{{ site.url }}/{{ page.main_slug }}/{{ page.this_slug }}-{{ sb.slug }}">{{ page.this_title }} {{ sb.nama }}</a></li>
-              {% endfor %}
-            </ul>
-          </div>
-        </div>
-      </div>
-    </main>
-    {% else %}
-    {{ content }}
-    {% endif %}
-    {% include themes/_footer.html %} 
-
-    <a href="index.html#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
-    <!-- Uncomment below i you want to use a preloader -->
-    <!-- <div id="preloader"></div> -->
-
-    <!-- JavaScript Libraries -->
-    <script src="{{ site.url }}/lib/jquery/jquery.min.js"></script>
-    <script src="{{ site.url }}/lib/jquery/jquery-migrate.min.js"></script>
-    <script src="{{ site.url }}/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="{{ site.url }}/lib/easing/easing.min.js"></script>
-    <script src="{{ site.url }}/lib/mobile-nav/mobile-nav.js"></script>
-    <script src="{{ site.url }}/lib/wow/wow.min.js"></script>
-    <script src="{{ site.url }}/lib/waypoints/waypoints.min.js"></script>
-    <script src="{{ site.url }}/lib/counterup/counterup.min.js"></script>
-    <script src="{{ site.url }}/lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="{{ site.url }}/lib/isotope/isotope.pkgd.min.js"></script>
-    <script src="{{ site.url }}/lib/lightbox/js/lightbox.min.js"></script>
-    <!-- Contact Form JavaScript File -->
-    <script src="{{ site.url }}/contactform/contactform.js"></script>
-
-    <!-- Template Main Javascript File -->
-    <script src="{{ site.url }}/js/main.js"></script>
-
-  </body>
 </html>

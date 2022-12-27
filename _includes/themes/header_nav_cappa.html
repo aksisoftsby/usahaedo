@@ -1,0 +1,37 @@
+<!-- Preloader -->
+<div class="preloader-bg"></div>
+<div id="preloader">
+    <div id="preloader-status">
+        <div class="preloader-position loader"> <span></span> </div>
+    </div>
+</div>
+<!-- Progress scroll totop -->
+<div class="progress-wrap cursor-pointer">
+    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+    </svg>
+</div>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg">
+    <div class="container">
+        <!-- Logo -->
+        <div class="logo-wrapper navbar-brand valign">
+            <a href="{{ site.url }}">
+                <div class="logo">
+                    <img src="{{ site.cdn }}img/logo.png" class="logo-img" alt="">
+                </div>
+            </a>
+        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span
+                class="icon-bar"><i class="ti-line-double"></i></span> </button>
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                {% for m in site.data.menu %}
+                <li class="nav-item"><a class="nav-link" href="{{ m.url }}">{{ m.title }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</nav>
