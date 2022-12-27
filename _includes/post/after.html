@@ -1,0 +1,14 @@
+<p>Kami {{ site.title }} menerima pembuatan {{ page.main_title }} dari berbagai macam Jenis dan Bahan Diantaranya : 
+<ul>
+  {% for pr in site.data.menu %}
+  {% if pr.nama == page.main_title %}
+  {% for prs in pr.sub %}
+  <li>{{ prs.nama }}</li>
+  {% endfor %}
+  {% endif %}
+  {% endfor %}
+</ul>
+</p>
+Segera Hubungi kami Sekarang Juga untuk Pemesanan {{ page.title }} dan {{ page.main_title }} Lainnya 
+{% include part/kontakkami.html %}
+

@@ -1,0 +1,30 @@
+<!--==========================
+    Header
+    ============================-->
+<header id="header" class="fixed-top">
+  <div class="container">
+
+    <div class="logo float-left">
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <h1 class="text-light"><a href="#header"><span>NewBiz</span></a></h1> -->
+      <a href="{{ site.url }}#intro" class="scrollto"><img src="{{ site.url }}/img/logo.png" alt="" class="img-fluid"></a>
+    </div>
+
+    <nav class="main-nav float-right d-none d-lg-block">
+      <ul>
+        <li><a href="{{ site.url }}/">Home</a></li>
+        <li class="drop-down">
+          <a href="#">produk</a>
+          <ul>
+            {% for mes in site.data.menu %}
+            <li><a href="{{ site.url }}/{{ mes.slug }}">{{ mes.nama }}</a></li>
+            {% endfor %}
+          </ul>
+        </li>
+        <li><a href="https://wedding.aksisoft.com">Wedding</a></li>
+        <li><a href="https://www.aksisoft.com">Jasa Web</a></li>
+      </ul>
+    </nav><!-- .main-nav -->
+
+  </div>
+</header><!-- #header -->

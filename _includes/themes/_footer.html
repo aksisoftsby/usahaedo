@@ -1,0 +1,52 @@
+<!--==========================
+      Footer
+    ============================-->
+<footer id="footer">
+  <div class="footer-top">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-lg-4 col-md-6 footer-info">
+          <h3>{{ site.title }}</h3>
+          <p>{{ site.long_description }}</p>
+        </div>
+
+        <div class="col-lg-2 col-md-6 footer-links">
+          <h4>Link Terkait</h4>
+          <ul>
+            <li><a href="{{ site.url }}">Home</a></li>
+            <li><a href="{{ site.url }}/#">About us</a></li>
+            <li><a href="{{ site.url }}/#">Services</a></li>
+            <li><a href="https://gogoprint.aksisoft.com">Printing dan Desain Murah</a></li>
+            <li><a href="https://wedding.aksisoft.com">Jasa Wedding</a></li>
+            <li><a href="https://www.aksisoft.com/">Jasa Website Aksisoft MEDIA</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6 footer-contact">
+          <h4>Kontak Kami</h4>
+          {% include part/kontakkami.html %}
+
+        </div>
+
+        <div class="col-lg-3 col-md-6 footer-newsletter">
+          <h4>Produk berkualitas terbaik</h4>
+          <p>Dapatkan Produk Kualitas terbaik dari kami, dapatkan harga termurah untuk {{ site.produk | join: ', '}}</p>
+          <form action="index.html" method="post">
+            <input type="email" name="email"><input type="submit"  value="Subscribe">
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="copyright">
+      &copy; Copyright <strong>{{ site.title }}</strong>. All Rights Reserved
+    </div>
+    <div class="credits">
+      Designed by <a href="{{ site.url }}">{{ site.description }}</a>
+    </div>
+  </div>
+</footer>
