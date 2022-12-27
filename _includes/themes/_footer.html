@@ -26,7 +26,6 @@
               <p class="footer-contact-mail">{{site.kontak.email}}</p>
             </div>
             <div class="footer-about-social-list">
-              {{ site.kontak | jsonify }}
               {% if site.kontak.instagram %}
               <a href="{{ site.kontak.instagram }}"><i class="ti-instagram"></i></a>
               {% endif %}

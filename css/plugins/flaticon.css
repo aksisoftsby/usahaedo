@@ -12,12 +12,6 @@ Flaticon icon font: Flaticon
 	font-weight: normal;
 	font-style: normal;
 }
-@media screen and (-webkit-min-device-pixel-ratio: 0) {
-	@font-face {
-		font-family: 'Flaticon';
-		src: url('https://duruthemes.com/demo/html/cappa/demo1/css/plugins/Flaticon.svg') format('svg');
-	}
-}
 [class^='flaticon-'],
 [class*=' flaticon-'],
 [class^='flaticon-'],
